@@ -84,3 +84,18 @@ class Rolebot(commands.Cog):
         if message.system_content != message_text:
             await message.edit(content=message_text)
         await message.remove_reaction(payload.emoji, payload.member)
+
+    @commands.Cog.listener()
+    async def on_voice_state_update(
+        self,
+        member: nextcord.Member,
+        before: nextcord.VoiceState,
+        after: nextcord.VoiceState,
+    ):
+        # if member switched voice channel, remove server mute/deafen
+        if (
+            before.channel != after.channel
+            and after.channel is not None
+            and (member.voice.mute or member.voice.deaf)
+        ):
+            await member.edit(mute=False, deafen=False)

@@ -5,11 +5,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: bot",
+      "name": "Python: Module",
       "type": "python",
       "request": "launch",
-      "program": "amogus_server_bot/bot.py",
-      "console": "integratedTerminal",
+      "module": "amogus_server_bot.bot",
       "justMyCode": true
     }
   ]

@@ -3,7 +3,7 @@ from nextcord.ext import commands
 from dotenv import load_dotenv
 import os
 import logging
-from rolebot_cog import Rolebot
+from amogus_server_bot.rolebot_cog import Rolebot
 
 load_dotenv()
 

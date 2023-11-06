@@ -2,7 +2,7 @@ import os
 import nextcord
 from nextcord.ext import commands
 
-import server_data
+import amogus_server_bot.server_data as server_data
 
 
 def check_if_it_is_me(interaction: nextcord.Interaction):
